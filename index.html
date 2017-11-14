@@ -26,10 +26,22 @@
 		}
   </style>
   <script>
-    function alertMessage() {
+
+    window.onload = function() {
+
+      entryButton = document.getElementById("entrybutton");
+      entryButton.onclick = function() {
+        var message = document.getElementById("entryinput").value;
+        entryAlert(message);
+      }
+    }
+    
+    function entryAlert(alertMessage){
+      alert(alertMessage);
+    }
+
+    function setTextOutput(text){
       
-      var message = document.getElementById("entryinput").value;
-      alert(message);
     }
 
   </script>
